@@ -48,7 +48,6 @@ try {
 
     var response = HTTP.Get('https://api.luxgroup.com/api/public-offers?limit=200');
     Write(response.Status + '<br />');
-    Write(response.Content);
     var region = "AU"
     var frontPageDE = DataExtension.Init("E8C0D2E0-F86F-4E87-8AC4-DB8E6AF39A5D")
     var data = Platform.Function.ParseJSON(response.Content)
