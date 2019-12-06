@@ -62,7 +62,6 @@ try {
       var schedule = schedules[i]
       var localSchedule = schedule[region]
 
-      Write(Stringify(localSchedule))
       upsertRow(api, localSchedule)
     }
 } catch(err) {
