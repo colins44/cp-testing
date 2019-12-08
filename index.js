@@ -65,6 +65,7 @@ try {
       upsertRow(api, localSchedule)
     }
 } catch(err) {
-  Write(Stringify(err))
+  var message  =  "an error occured " + err.message
+  Write(Stringify(message))
 }
 </script>
