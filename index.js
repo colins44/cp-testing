@@ -56,7 +56,7 @@
       var result = results[i]
       schedules.push(result.list_visibility_schedules)
     }
-    Write(schedules)
+    Write(Stringify(schedules))
     //var api = new Script.Util.WSProxy();
     //for (var i = 0, len = schedules.length; i < len; i++) {
     //  var schedule = schedules[i]
