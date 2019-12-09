@@ -61,7 +61,7 @@
     for (var i = 0, len = schedules.length; i < len; i++) {
       var schedule = schedules[i]
       var localSchedule = schedule[region]
-      Write(Stringify(localSchedule)
+      Write(Stringify(localSchedule))
 
       //upsertRow(api, localSchedule)
     }
