@@ -39,10 +39,16 @@
               }
           ]
       };
+      Write('<br />');
       Write(Stringify(updateObject))
-      //var options = {SaveOptions: [{'PropertyName': '*', SaveAction: 'UpdateAdd'}]};
-      //var res = api.updateItem('DataExtensionObject', updateObject, options);
-      //Write(Stringify(res))
+      var options = {SaveOptions: [{'PropertyName': '*', SaveAction: 'UpdateAdd'}]};
+      try {
+        var res = api.updateItem('DataExtensionObject', updateObject, options);
+        Write(Stringify(res))
+      } catch (err) {
+        Write("something went wron")
+        Write(Stringify(err.message))
+      }
     }
 
     var response = HTTP.Get('https://api.luxgroup.com/api/public-offers?limit=200');
@@ -56,7 +62,6 @@
       var result = results[i]
       schedules.push(result.list_visibility_schedules)
     }
-    Write("testing")
     Write('<br />');
     //var api = new Script.Util.WSProxy();
     for (var i = 0, len = schedules.length; i < len; i++) {
