@@ -60,9 +60,8 @@
     //var api = new Script.Util.WSProxy();
     for (var i = 0, len = schedules.length; i < len; i++) {
       var schedule = schedules[i]
-      Write(Stringify(schedule))
-      //var localSchedule = schedule[region]
-      //Write(Stringify(localSchedule)
+      var localSchedule = schedule[region]
+      Write(Stringify(localSchedule)
 
       //upsertRow(api, localSchedule)
     }
