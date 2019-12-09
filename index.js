@@ -65,6 +65,6 @@
       Write(Stringify(localSchedule))
       Write('<br />');
 
-     /upsertRow(api, localSchedule)
+     upsertRow(api, localSchedule)
     }
 </script>
