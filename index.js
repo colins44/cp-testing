@@ -48,23 +48,23 @@ try {
 
     var response = HTTP.Get('https://api.luxgroup.com/api/public-offers?limit=200');
     Write(response.Status + '<br />');
-    var region = "AU"
-    var frontPageDE = DataExtension.Init("E8C0D2E0-F86F-4E87-8AC4-DB8E6AF39A5D")
-    var data = Platform.Function.ParseJSON(response.Content)
-    var results = data.result
-    var schedules = []
-    for (var i = 0, len = result.length; i < len; i++) {
-      var result = results[i]
-      schedules.push(result.list_visibility_schedules)
-    }
-    var api = new Script.Util.WSProxy();
-    for (var i = 0, len = schedules.length; i < len; i++) {
-      var schedule = schedules[i]
-      var localSchedule = schedule[region]
-      Write(Stringify(localSchedule)
+    //var region = "AU"
+    //var frontPageDE = DataExtension.Init("E8C0D2E0-F86F-4E87-8AC4-DB8E6AF39A5D")
+    //var data = Platform.Function.ParseJSON(response.Content)
+    //var results = data.result
+    //var schedules = []
+    //for (var i = 0, len = result.length; i < len; i++) {
+    //  var result = results[i]
+    //  schedules.push(result.list_visibility_schedules)
+    //}
+    //var api = new Script.Util.WSProxy();
+    //for (var i = 0, len = schedules.length; i < len; i++) {
+    //  var schedule = schedules[i]
+    //  var localSchedule = schedule[region]
+    //  Write(Stringify(localSchedule)
 
-      //upsertRow(api, localSchedule)
-    }
+    //  //upsertRow(api, localSchedule)
+    //}
 } catch(err) {
   var message  =  "an error occured " + err.message
   Write(Stringify(message))
