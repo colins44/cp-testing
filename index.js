@@ -3,7 +3,7 @@
 
     var upsertRow = function(api, localSchedule) {
       var updateObject = {
-          CustomerKey: 'DE_Example',
+          CustomerKey: 'E8C0D2E0-F86F-4E87-8AC4-DB8E6AF39A5D',
           Properties: [
               {
                   Name: 'id',
