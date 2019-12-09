@@ -1,7 +1,6 @@
 <script runat=server>
     Platform.Load("core", "1");
 
-try {
     //var upsertRow = function(api, localSchedule) {
     //  var updateObject = {
     //      CustomerKey: 'DE_Example',
@@ -65,8 +64,4 @@ try {
 
     //  //upsertRow(api, localSchedule)
     //}
-} catch(err) {
-  var message  =  "an error occured " + err.message
-  Write(Stringify(message))
-}
 </script>
