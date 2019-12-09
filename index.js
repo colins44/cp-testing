@@ -57,7 +57,7 @@
       schedules.push(result.list_visibility_schedules)
     }
     Write("testing")
-    var api = new Script.Util.WSProxy();
+    //var api = new Script.Util.WSProxy();
     for (var i = 0, len = schedules.length; i < len; i++) {
       var schedule = schedules[i]
       var localSchedule = schedule[region]
