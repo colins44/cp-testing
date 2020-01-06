@@ -53,6 +53,7 @@
 
     while (resultCount < limit) {
       url = url  + '&page=' + page
+      Write('testing within while loop');
       Write('<br />');
       Write(url)
       var response = HTTP.Get(url);
