@@ -53,6 +53,8 @@
 
     while (resultCount < limit) {
       url = url  + '&page=' + page
+      Write('<br />');
+      Write(url)
       var response = HTTP.Get(url);
       var data = Platform.Function.ParseJSON(response.Content)
       results = results.concat(data.results)
