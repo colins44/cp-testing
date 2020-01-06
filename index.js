@@ -5,6 +5,7 @@
    var page = 1;
    var url = 'https://api.luxgroup.com/api/public-offers?';
    var noOfPages = 15;
+   var moreData = true;
 
    var upsertRow = function(api, localSchedule) {
      var updateObject = {
@@ -62,6 +63,10 @@
      };
      page = ++page;
      results = results.concat(data.result);
+   }
+   while (moreData) {
+     Write("we are getting more data");
+     moreData = false
    }
 
 
