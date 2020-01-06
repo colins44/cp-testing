@@ -57,6 +57,7 @@
       Write('<br />');
       Write(url)
       var response = HTTP.Get(url);
+      Write(response.Status + '<br />');
       var data = Platform.Function.ParseJSON(response.Content)
       results = results.concat(data.results)
       page = ++page
@@ -66,7 +67,6 @@
       }
     }
 
-    Write(response.Status + '<br />');
     var frontPageDE = DataExtension.Init("E8C0D2E0-F86F-4E87-8AC4-DB8E6AF39A5D")
     var schedules = []
     for (var i = 0, len = results.length; i < len; i++) {
