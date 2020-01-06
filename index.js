@@ -62,7 +62,7 @@
         break;
       };
       page = ++page;
-      results = results.concat(data.results);
+      results = results.concat(data.result);
     }
     Write('results' + results + '<br />');
 
