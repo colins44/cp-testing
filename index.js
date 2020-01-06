@@ -6,7 +6,7 @@
     var results = [];
     var page = 1;
     var url = 'https://api.luxgroup.com/api/public-offers?limit=' + limit ;
-    var noOfPages = 25;
+    var noOfPages = 15;
 
     var upsertRow = function(api, localSchedule) {
       var updateObject = {
@@ -54,11 +54,16 @@
     for (var i = 0; i < noOfPages; i++) {
       Write('testing within for loop ' + '<br />');
       url = url  + '&page=' + page;
+      page = ++page;
       Write(url + '<br />');
       var response = HTTP.Get(url);
       Write(response.Status + '<br />');
-      
+      var data = Platform.Function.ParseJSON(response.Content);
+      if (data.results.length === 0) {
+        break;
+      };
     }
+
     Write('logging outside the while loop');
     while (resultCount < limit) {
       url = url  + '&page=' + page
