@@ -53,32 +53,16 @@
     }
     for (var i = 0; i < noOfPages; i++) {
       Write('testing within for loop ' + '<br />');
-      url = url  + '&page=' + page;
-      page = ++page;
-      Write(url + '<br />');
-      var response = HTTP.Get(url);
-      Write(response.Status + '<br />');
+      var pageUrl = url + '&page=' + page;
+      Write(pageUrl + '<br />');
+      var response = HTTP.Get(pageUrl);
+      Write('status' + response.Status + '<br />');
       var data = Platform.Function.ParseJSON(response.Content);
       if (data.results.length === 0) {
         break;
       };
-    }
-
-    Write('logging outside the while loop');
-    while (resultCount < limit) {
-      url = url  + '&page=' + page
-      Write('testing within while loop');
-      Write('<br />');
-      Write(url + '<br />');
-      var response = HTTP.Get(url);
-      Write(response.Status + '<br />');
-      var data = Platform.Function.ParseJSON(response.Content);
+      page = ++page;
       results = results.concat(data.results);
-      page = ++page;
-      resultCount = resultCount + data.results.length;
-      if (data.results.length === 0) {
-        break;
-      };
     }
     Write('results' + results + '<br />');
 
