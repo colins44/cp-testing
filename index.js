@@ -1,11 +1,9 @@
 <script runat=server>
    Platform.Load("core", "1");
    var region = "AU";
-   var limit = 200;
-   var resultsCount = 0;
    var results = [];
    var page = 1;
-   var url = 'https://api.luxgroup.com/api/public-offers?limit=' + limit ;
+   var url = 'https://api.luxgroup.com/api/public-offers? ;
    var noOfPages = 15;
 
    var upsertRow = function(api, localSchedule) {
