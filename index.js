@@ -64,7 +64,7 @@
      results = results.concat(data.result);
    }
 
-   Write('results' + Stringify(results) + '<br />');
+   Write('results' + results.length + '<br />');
 
    //var frontPageDE = DataExtension.Init("E8C0D2E0-F86F-4E87-8AC4-DB8E6AF39A5D")
    //var schedules = []
