@@ -51,22 +51,31 @@
      var res = api.updateItem('DataExtensionObject', updateObject, options);
    }
 
-   for (var i = 0; i < noOfPages; i++) {
-     Write('testing within for loop ' + '<br />');
+   //for (var i = 0; i < noOfPages; i++) {
+   //  Write('testing within for loop ' + '<br />');
+   //  var pageUrl = url + '&page=' + page;
+   //  Write(pageUrl + '<br />');
+   //  var response = HTTP.Get(pageUrl);
+   //  Write('status ' + response.Status + '<br />');
+   //  var data = Platform.Function.ParseJSON(response.Content);
+   //  if (data.result.length === 0) {
+   //    break;
+   //  };
+   //  page = ++page;
+   //  results = results.concat(data.result);
+   //}
+   while (moreData) {
+     Write("we are getting more data");
      var pageUrl = url + '&page=' + page;
      Write(pageUrl + '<br />');
      var response = HTTP.Get(pageUrl);
      Write('status ' + response.Status + '<br />');
      var data = Platform.Function.ParseJSON(response.Content);
      if (data.result.length === 0) {
-       break;
+       moreData = false;
      };
      page = ++page;
      results = results.concat(data.result);
-   }
-   while (moreData) {
-     Write("we are getting more data");
-     moreData = false
    }
 
 
