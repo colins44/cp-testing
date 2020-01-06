@@ -62,7 +62,7 @@
      if (data.result.length === 0) {
        break;
      };
-     Write('result length' + data.result.length + '<br />');
+     Write('result length' + data + '<br />');
      page = ++page;
      results = results.concat(data.result);
    }
