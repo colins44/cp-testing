@@ -57,7 +57,7 @@
      var pageUrl = url + '&page=' + page;
      Write(pageUrl + '<br />');
      var response = HTTP.Get(pageUrl);
-     Write('status' + response.Status + '<br />');
+     Write('status ' + response.Status + '<br />');
      var data = Platform.Function.ParseJSON(response.Content);
      Write(Stringify(data));
      if (data.result.length === 0) {
