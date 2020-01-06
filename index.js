@@ -58,6 +58,7 @@
      Write(pageUrl + '<br />');
      var response = HTTP.Get(pageUrl);
      Write('status' + response.Status + '<br />');
+     Write('result length' + response.result.lenght + '<br />');
      var data = Platform.Function.ParseJSON(response.Content);
      if (data.result.length === 0) {
        break;
