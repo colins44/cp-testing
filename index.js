@@ -1,11 +1,12 @@
 <script runat=server>
     Platform.Load("core", "1");
-    var region = "AU"
-    var limit = 200
-    var resultsCount = 0
-    var results = []
-    var page = 1
-    var url = 'https://api.luxgroup.com/api/public-offers?limit=' + limit 
+    var region = "AU";
+    var limit = 200;
+    var resultsCount = 0;
+    var results = [];
+    var page = 1;
+    var url = 'https://api.luxgroup.com/api/public-offers?limit=' + limit ;
+    var noOfPages = 10;
 
     var upsertRow = function(api, localSchedule) {
       var updateObject = {
@@ -50,7 +51,10 @@
       var options = {SaveOptions: [{'PropertyName': '*', SaveAction: 'UpdateAdd'}]};
       var res = api.updateItem('DataExtensionObject', updateObject, options);
     }
-
+    for (var i = 0; i < noOfPages; i++) {
+      Write('testing within for loop ');
+      
+    }
     Write('logging outside the while loop');
     while (resultCount < limit) {
       url = url  + '&page=' + page
