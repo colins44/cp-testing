@@ -51,6 +51,7 @@
       var res = api.updateItem('DataExtensionObject', updateObject, options);
     }
 
+    Write('logging outside the while loop');
     while (resultCount < limit) {
       url = url  + '&page=' + page
       Write('testing within while loop');
