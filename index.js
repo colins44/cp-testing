@@ -1,11 +1,22 @@
 <script runat=server>
    Platform.Load("core", "1");
+   /*
+   * This script pulls all the offers from the frontpage of the website, gets their schedules and upserts those schedules 
+   * to the given data extension
+   *
+   * How to use
+   * set the region to the region that you are interested in saving the schedules for
+   * set the DataExtensionKey to the DE that you would like to save schedules for, ensure that this DE has the correct structure
+   * in order to accept the incoming data
+   */
+
+   // set the following two variables
    var region = "AU";
    var DataExtensionKey = "E8C0D2E0-F86F-4E87-8AC4-DB8E6AF39A5D"
 
+   var url = 'https://api.luxgroup.com/api/public-offers?';
    var results = [];
    var page = 1;
-   var url = 'https://api.luxgroup.com/api/public-offers?';
    var moreData = true;
 
    var upsertRow = function(api, localSchedule) {
