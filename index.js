@@ -57,18 +57,13 @@
              }
          ]
      };
-     Write('<br />');
-     Write(Stringify(updateObject))
      var options = {SaveOptions: [{'PropertyName': '*', SaveAction: 'UpdateAdd'}]};
      var res = api.updateItem('DataExtensionObject', updateObject, options);
    }
 
    while (moreData) {
-     Write("we are getting more data");
      var pageUrl = url + '&page=' + page;
-     Write(pageUrl + '<br />');
      var response = HTTP.Get(pageUrl);
-     Write('status ' + response.Status + '<br />');
      var data = Platform.Function.ParseJSON(response.Content);
      if (data.result.length === 0) {
        moreData = false;
@@ -84,14 +79,13 @@
      var result = results[i]
      schedules.push(result.list_visibility_schedules)
    }
-   Write('<br />');
    var api = new Script.Util.WSProxy();
    for (var i = 0, len = schedules.length; i < len; i++) {
      var schedule = schedules[i]
      var localSchedule = schedule[region]
-     Write('<br />');
      upsertRow(api, localSchedule)
    }
-
+   Write('check data extension for updated schedules')
+  
 </script>
 
