@@ -1,10 +1,11 @@
 <script runat=server>
    Platform.Load("core", "1");
    var region = "AU";
+   var DataExtensionKey = "E8C0D2E0-F86F-4E87-8AC4-DB8E6AF39A5D"
+
    var results = [];
    var page = 1;
    var url = 'https://api.luxgroup.com/api/public-offers?';
-   var noOfPages = 15;
    var moreData = true;
 
    var upsertRow = function(api, localSchedule) {
@@ -51,19 +52,6 @@
      var res = api.updateItem('DataExtensionObject', updateObject, options);
    }
 
-   //for (var i = 0; i < noOfPages; i++) {
-   //  Write('testing within for loop ' + '<br />');
-   //  var pageUrl = url + '&page=' + page;
-   //  Write(pageUrl + '<br />');
-   //  var response = HTTP.Get(pageUrl);
-   //  Write('status ' + response.Status + '<br />');
-   //  var data = Platform.Function.ParseJSON(response.Content);
-   //  if (data.result.length === 0) {
-   //    break;
-   //  };
-   //  page = ++page;
-   //  results = results.concat(data.result);
-   //}
    while (moreData) {
      Write("we are getting more data");
      var pageUrl = url + '&page=' + page;
@@ -79,7 +67,7 @@
    }
 
 
-   var frontPageDE = DataExtension.Init("E8C0D2E0-F86F-4E87-8AC4-DB8E6AF39A5D")
+   var frontPageDE = DataExtension.Init(DataExtensionKey)
    var schedules = []
    for (var i = 0, len = results.length; i < len; i++) {
      var result = results[i]
