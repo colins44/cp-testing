@@ -9,8 +9,6 @@
   cloudpage('login')
 
 
-  var button = " <button type="button" onclick="logout()">Click Me!</button> "
-
-  Write(button)
+  Write(" <button type="button" onclick="logout()">Click Me!</button> ")
 </script>
 
