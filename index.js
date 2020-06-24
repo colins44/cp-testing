@@ -7,7 +7,9 @@
   debug('we are testing here');
   console_log('is the console.log working')
   cloudpage('login')
-  var button = " <button type="button">Click Me!</button> "
+
+
+  var button = " <button type="button" onclick="logout()">Click Me!</button> "
 
   Write(button)
 </script>
