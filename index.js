@@ -5,6 +5,8 @@
 
   var debugMode = ['console'];
   debug('we are testing here');
+  console_log('is the console.log working')
+  cloudpage('login')
 
 </script>
 
