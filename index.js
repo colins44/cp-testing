@@ -8,8 +8,17 @@
   console_log('is the console.log working')
   cloudpage('login')
 
-
-  //Write(' <button type="button" onclick="logout()">Click Me!</button> ')
-  Write('this is a test')
 </script>
+
+<script>
+  function logout() {
+    console.log('testing here sascha')
+
+  }
+</script>
+
+<html>
+  <button type="button" onclick="logout()">Click Me!</button>
+
+</html>
 
