@@ -27,7 +27,7 @@
 
   var status                   = response.Status
   var body               = Platform.Function.ParseJSON(response.Content);
-  var inclusionHighlights [];
+  var inclusionHighlights;
 
   // set inclusionHighlightsHtml to start with a html unordered list
   //var inclusionHighlightsHtml = "<ul><li>this is a test element</li>"
@@ -50,6 +50,7 @@
 
   Variable.SetValue("@status", status)
   Variable.SetValue("@inclusionHighlightsHtml", inclusionHighlightsHtml)
+  Variable.SetValue("@inclusionHighlights", inclusionHighlights)
 
 </script>
 %%=v(@inclusionHighlightsHtml)=%%
