@@ -31,7 +31,7 @@
 
   // set inclusionHighlightsHtml to start with a html unordered list
   //var inclusionHighlightsHtml = "<ul><li>this is a test element</li>"
-  var inclusionHighlightsHtml = "this is a test element</li>"
+  var inclusionHighlightsHtml = "this is a test element"
 
     //for (i = 0; i < body.packages.length; i++){
     //  if (body.packages[i]['unique_key'] == packageId) {
@@ -50,7 +50,6 @@
 
   Variable.SetValue("@status", status)
   Variable.SetValue("@inclusionHighlightsHtml", inclusionHighlightsHtml)
-  Variable.SetValue("@inclusionHighlights", inclusionHighlights)
 
 </script>
 %%=v(@inclusionHighlightsHtml)=%%
