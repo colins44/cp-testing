@@ -27,16 +27,16 @@
 
   var status                   = response.Status
   var body               = Platform.Function.ParseJSON(response.Content);
-  var inclusionHighlights;
+  var inclusionHighlights [];
 
   // set inclusionHighlightsHtml to start with a html unordered list
   var inclusionHighlightsHtml = "<ul><li>this is a test element</li>"
 
-    for (i = 0; i < body.packages.length; i++){
-      if (body.packages[i]['unique_key'] == packageId) {
-        inclusionHighlights = body.packages[i]['inclusion_highlights_html']
-      }
-    }
+    //for (i = 0; i < body.packages.length; i++){
+    //  if (body.packages[i]['unique_key'] == packageId) {
+    //    inclusionHighlights = body.packages[i]['inclusion_highlights_html']
+    //  }
+    //}
 
     // add each inclusion hightlight html list element to it
     //for (i = 0: i < inclusionHighlights.length; i++) {
@@ -53,4 +53,3 @@
 
 </script>
 %%=v(@inclusionHighlightsHtml)=%%
-%%=v(@inclusionHighlights)=%%
