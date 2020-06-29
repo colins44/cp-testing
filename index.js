@@ -53,3 +53,4 @@
 
 </script>
 %%=v(@inclusionHighlightsHtml)=%%
+%%=v(@inclusionHighlights)=%%
