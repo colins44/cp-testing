@@ -49,6 +49,8 @@
 
   Variable.SetValue("@status", status)
   Variable.SetValue("@inclusionHighlightsHtml", inclusionHighlightsHtml)
+  Variable.SetValue("@inclusionHighlights", inclusionHighlights)
 
 </script>
 %%=v(@inclusionHighlightsHtml)=%%
+%%=v(@inclusionHighlights)=%%
