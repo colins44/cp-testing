@@ -10,7 +10,7 @@
         var headerValues    = [access_token];
         var response        = HTTP.Get(url, headerNames, headerValues)
 
-             if (response.Status != 0 ) {
+        if (response.Status != 0 ) {
             //logError('Not OK status for getApiData url: ' + url)
         } else {
           return response
@@ -30,18 +30,19 @@
   var inclusionHighlights;
 
   // set inclusionHighlightsHtml to start with a html unordered list
-  var inclusionHighlightsHtml = "<ul><li>this is a test element</li>"
+  //var inclusionHighlightsHtml = "<ul><li>this is a test element</li>"
+  var inclusionHighlightsHtml = "this is a test element"
 
-  for (i = 0; i < body.packages.length; i++){
-    if (body.packages[i]['unique_key'] == packageId) {
-      inclusionHighlights = body.packages[i]['inclusion_highlights_html']
-    }
-  }
+    //for (i = 0; i < body.packages.length; i++){
+    //  if (body.packages[i]['unique_key'] == packageId) {
+    //    inclusionHighlights = body.packages[i]['inclusion_highlights_html']
+    //  }
+    //}
 
-  // add each inclusion hightlight html list element to it
-  for (i = 0: i < inclusionHighlights.length; i++) {
-    inclusionHighlightsHtml += inclusionHighlights[i]
-  }
+    //// add each inclusion hightlight html list element to it
+    //for (i = 0: i < inclusionHighlights.length; i++) {
+    //  inclusionHighlightsHtml += inclusionHighlights[i]
+    //}
 
   // ensure that you close off the unorder list
   inclusionHighlightsHtml += "</ul>"
