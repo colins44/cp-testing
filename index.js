@@ -39,9 +39,9 @@
     }
 
     // add each inclusion hightlight html list element to it
-    //for (i = 0: i < inclusionHighlights.length; i++) {
-    //  inclusionHighlightsHtml += inclusionHighlights[i]
-    //}
+    for (i = 0; i < inclusionHighlights.length; i++) {
+      inclusionHighlightsHtml += inclusionHighlights[i]
+    }
 
   // ensure that you close off the unorder list
   inclusionHighlightsHtml += "</ul>"
