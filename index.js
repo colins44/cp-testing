@@ -30,8 +30,7 @@
   var inclusionHighlights;
 
   // set inclusionHighlightsHtml to start with a html unordered list
-  //var inclusionHighlightsHtml = "<ul><li>this is a test element</li>"
-  var inclusionHighlightsHtml = "this is a test element"
+  var inclusionHighlightsHtml = "<ul><li>this is a test element</li>"
 
     //for (i = 0; i < body.packages.length; i++){
     //  if (body.packages[i]['unique_key'] == packageId) {
