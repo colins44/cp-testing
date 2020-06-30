@@ -3,7 +3,9 @@
   Platform.Load("Core", "1");
   Platform.Function.ContentBlockByKey('ssjs-lib');
 
-  cloudpage('login')
+  var debugMode = ['console'];
+  debug('we are testing here');
+  console_log('is the console.log working')
 
 </script>
 
