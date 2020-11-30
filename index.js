@@ -6,6 +6,7 @@
   var debugMode = ['console'];
   debug('we are testing here');
   console_log('is the console.log working')
+  console_log(SHA256('key'))
 
 </script>
 
